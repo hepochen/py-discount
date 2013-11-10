@@ -1,4 +1,5 @@
 graft _discount
+include discount/markdown.so
 include AUTHORS
 include LICENSE
 include INSTALL
