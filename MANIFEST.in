@@ -1,3 +1,4 @@
+include discount/markdown
 include AUTHORS
 include LICENSE
 include INSTALL
