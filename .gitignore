@@ -1,0 +1,4 @@
+discount/markdown
+.idea/*
+build/*
+dist/*

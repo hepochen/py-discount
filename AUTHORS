@@ -1,0 +1,18 @@
+Primary authors of the C library:
+
+* David Parsons <orc@pell.chi.il.us> and contributors
+  (see the CREDITS file in the C source distribution)
+
+Primary authors of the Python bindings:
+
+* Tamas Kemenczy <tkemenczy@trapeze.com>
+
+* Hepo Chen <hepochen@gmail.com>
+
+Thanks to:
+
+* David Parsons and contributors for writing the awesome C library on
+  which this package depends.
+
+* Trapeze Media <http://trapeze.com> for providing the time and
+  resources to work on this project.
