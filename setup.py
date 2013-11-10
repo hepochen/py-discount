@@ -17,6 +17,7 @@ class build_py(_build_py):
             return
         else:
             os.chdir('_discount')
+            subprocess.call('chmod 777 configure.sh'.split())
             subprocess.call(['./configure.sh', '--with-fenced-code', '--with-urlencoded-anchor', '--enable-all-features'])
             subprocess.call(['make', 'install'])
             os.chdir(root)
