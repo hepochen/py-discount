@@ -55,11 +55,12 @@ MKD_EXTRA_FOOTNOTE = 0x00200000
 #define MKD_EMBED        MKD_NOLINKS|MKD_NOIMAGE|MKD_TAGTEXT
 
 
-discount_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'markdown')
-
-
-_so = ctypes.CDLL(discount_path)
-
+_so = ctypes.CDLL(
+    os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        '_discount.so'
+    )
+)
 
 markdown_version = (ctypes.c_char * 64).in_dll(_so, 'markdown_version').value
 
