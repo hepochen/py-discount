@@ -57,8 +57,8 @@ MKD_EXTRA_FOOTNOTE = 0x00200000
 
 _so = ctypes.CDLL(
     os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        '_discount.so'
+        os.path.dirname(os.path.abspath(__file__)),
+        'markdown.so'
     )
 )
 

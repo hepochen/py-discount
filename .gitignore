@@ -1,4 +1,6 @@
-discount/markdown
+discount/markdown.so
+*.pyc
+*.o
 .idea/*
 build/*
 dist/*
