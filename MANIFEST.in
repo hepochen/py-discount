@@ -1,5 +1,4 @@
 graft _discount
-include discount/markdown
 include AUTHORS
 include LICENSE
 include INSTALL
