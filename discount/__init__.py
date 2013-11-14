@@ -27,23 +27,29 @@ import libmarkdown
 
 
 _KWARGS_TO_LIBMARKDOWN_FLAGS = {
-    'toc': libmarkdown.MKD_TOC,
+    'no_links': libmarkdown.MKD_NOLINKS,
+    'no_image': libmarkdown.MKD_NOIMAGE,
+    'no_pants': libmarkdown.MKD_NOPANTS,
+    'no_html': libmarkdown.MKD_NOHTML,
     'strict': libmarkdown.MKD_STRICT,
-    'footnote': libmarkdown.MKD_EXTRA_FOOTNOTE,
+    'tag_text': libmarkdown.MKD_TAGTEXT,
+    'no_ext': libmarkdown.MKD_NO_EXT,
+    'cdata': libmarkdown.MKD_CDATA,
+    'no_superscript': libmarkdown.MKD_NOSUPERSCRIPT,
+    'no_relaxed': libmarkdown.MKD_NORELAXED,
+    'no_tables': libmarkdown.MKD_NOTABLES,
+    'no_strike_through': libmarkdown.MKD_NOSTRIKETHROUGH,
+    'toc': libmarkdown.MKD_TOC,
     'autolink': libmarkdown.MKD_AUTOLINK,
     'safelink': libmarkdown.MKD_SAFELINK,
-    'cdata': libmarkdown.MKD_CDATA,
-    'ignore_header': libmarkdown.MKD_NOHEADER,
-    'ignore_dlist': libmarkdown.MKD_NODLIST,
-    'ignore_alpha_list': libmarkdown.MKD_NOALPHALIST,
-    'ignore_strike_through': libmarkdown.MKD_NOSTRIKETHROUGH,
-    'ignore_superscript': libmarkdown.MKD_NOSUPERSCRIPT,
-    'ignore_links': libmarkdown.MKD_NOLINKS,
-    'ignore_images': libmarkdown.MKD_NOIMAGE,
-    'ignore_tables': libmarkdown.MKD_NOTABLES,
-    'ignore_smartypants': libmarkdown.MKD_NOPANTS,
-    'ignore_embedded_html': libmarkdown.MKD_NOHTML,
-    'ignore_pseudo_protocols': libmarkdown.MKD_NO_EXT,
+    'no_header': libmarkdown.MKD_NOHEADER,
+    'tab_stop': libmarkdown.MKD_TABSTOP,
+    'no_div_quote': libmarkdown.MKD_NODIVQUOTE,
+    'no_alpha_list': libmarkdown.MKD_NOALPHALIST,
+    'no_dlist': libmarkdown.MKD_NODLIST,
+    'footnote': libmarkdown.MKD_EXTRA_FOOTNOTE,
+    'no_style': libmarkdown.MKD_NOSTYLE,
+
 }
 
 

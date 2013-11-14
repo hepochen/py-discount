@@ -27,32 +27,31 @@ import os
 
 
 
-MKD_NOLINKS = 0x0001
-MKD_NOIMAGE = 0x0002
-MKD_NOPANTS = 0x0004
-MKD_NOHTML = 0x0008
-MKD_STRICT = 0x0010
-MKD_TAGTEXT = 0x0020
-MKD_NO_EXT = 0x0040
-MKD_CDATA = 0x0080
+MKD_NOLINKS = 0x0001 # don't do link processing, block <a> tags
+MKD_NOIMAGE = 0x0002 # don't do image processing, block <img>
+MKD_NOPANTS = 0x0004  # don't run smartypants()
+MKD_NOHTML = 0x0008 # don't allow raw html through AT ALL
+MKD_STRICT = 0x0010 # disable SUPERSCRIPT, RELAXED_EMPHASIS
+MKD_TAGTEXT = 0x0020 #  process text inside an html tag; no <em>, no <bold>, no html or [] expansion
+MKD_NO_EXT = 0x0040 # ^^^ (aliased for user convenience)
+MKD_CDATA = 0x0080 # generate code for xml ![CDATA[...]]
 MKD_NOSUPERSCRIPT = 0x0100 #no A^B */
 MKD_NORELAXED = 0x0200 # emphasis happens /everywhere/
-MKD_NOHEADER = 0x0100 # don't process header blocks
-MKD_TABSTOP = 0x0200 # expand tabs to 4 spaces
 MKD_NOTABLES = 0x0400 # disallow tables
+MKD_NOSTRIKETHROUGH = 0x00000800  # forbid ~~strikethrough~~
 MKD_TOC = 0x1000 # do table-of-contents processing
-MKD_1_COMPAT = 0x2000
+MKD_1_COMPAT = 0x2000 # compatibility with MarkdownTest_1.0
 MKD_AUTOLINK =  0x4000 # make http://foo.com link even without <>s
 MKD_SAFELINK = 0x8000 # paranoid check for link protocol
-MKD_NOSTRIKETHROUGH = 0x8000 # forbid ~~strikethrough~~
+MKD_NOHEADER = 0x00010000 # don't process header blocks
+MKD_TABSTOP = 0x00020000 # expand tabs to 4 spaces
+MKD_NODIVQUOTE = 0x00040000  # forbid >%class% blocks
+MKD_NOALPHALIST = 0x00080000  #  forbid alphabetic lists
 MKD_NODLIST = 0x00100000 # forbid definition lists
-MKD_NOALPHALIST = 0x00080000
-MKD_EXTRA_FOOTNOTE = 0x00200000
+MKD_EXTRA_FOOTNOTE = 0x00200000 # enable markdown extra-style footnotes
+MKD_NOSTYLE = 0x00400000        # don't extract <style> blocks
+MKD_EMBED = MKD_NOLINKS|MKD_NOIMAGE|MKD_TAGTEXT
 
-#define MKD_1_COMPAT        0x00002000        /* compatibility with MarkdownTest_1.0 */
-#define MKD_NODIVQUOTE        0x00040000        /* forbid >%class% blocks */
-#define MKD_NOSTYLE        0x00400000        /* don't extract <style> blocks */
-#define MKD_EMBED        MKD_NOLINKS|MKD_NOIMAGE|MKD_TAGTEXT
 
 
 _so = ctypes.CDLL(
